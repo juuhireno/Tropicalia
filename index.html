@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropicália - O Movimento Cultural</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de acessibilidade -->
+    <div class="acessibilidade">
+        <button onclick="aumentarFonte()">A+</button>
+        <button onclick="diminuirFonte()">A-</button>
+        <button onclick="alternarContraste()">Alto Contraste</button>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>🌺 Movimento Tropicália 🌿</h1>
+        <nav>
+            <ul>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#artistas">Principais Artistas</a></li>
+                <li><a href="#impacto">Impacto Cultural</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção: História -->
+    <section id="historia">
+        <h2>📖 História da Tropicália 
+            <button onclick="lerTexto('historia')">🔊</button>
+        </h2>
+        <p id="historia">A Tropicália foi um movimento cultural brasileiro que surgiu na década de 1960, misturando diferentes estilos musicais, como MPB, rock e música psicodélica.</p>
+        <p>Com influências da contracultura e do modernismo, o movimento teve forte impacto na música, no cinema, no teatro e nas artes visuais.</p>
+    </section>
+
+    <!-- Seção: Principais Artistas -->
+    <section id="artistas">
+        <h2>🎤 Principais Artistas 
+            <button onclick="lerTexto('artistas')">🔊</button>
+        </h2>
+        <ul id="artistas">
+            <li><strong>Caetano Veloso</strong></li>
+            <li><strong>Gilberto Gil</strong></li>
+            <li><strong>Gal Costa</strong></li>
+            <li><strong>Os Mutantes</strong></li>
+            <li><strong>Tom Zé</strong></li>
+            <li><strong>Torquato Neto</strong></li>
+        </ul>
+    </section>
+
+    <!-- Seção: Impacto Cultural -->
+    <section id="impacto">
+        <h2>🌎 Impacto Cultural 
+            <button onclick="lerTexto('impacto')">🔊</button>
+        </h2>
+        <p id="impacto">O movimento Tropicália influenciou gerações de artistas e ajudou a transformar a música brasileira, tornando-a mais experimental e globalizada.</p>
+        <p>Além da música, a Tropicália impactou o teatro, o cinema e as artes visuais, promovendo uma renovação cultural no Brasil.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 Movimento Tropicália | Desenvolvido por Você</p>
+    </footer>
+
+    <!-- Importando o JavaScript -->
+    <script defer src="script.js"></script>
+
+</body>
+</html>
