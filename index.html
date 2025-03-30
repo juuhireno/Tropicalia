@@ -4,7 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tropicália - O Movimento Cultural</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Configurações gerais */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Barra de acessibilidade */
+        .acessibilidade {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: white;
+        }
+
+        .acessibilidade button {
+            margin: 5px;
+            padding: 8px 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .acessibilidade button:hover {
+            background: #444;
+            color: white;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #ffcc00;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Seções */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Botão de fala */
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+        }
+
+        /* Alto contraste */
+        .alto-contraste {
+            background: black !important;
+            color: yellow !important;
+        }
+
+        .alto-contraste a {
+            color: cyan !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -65,8 +162,60 @@
         <p>© 2025 Movimento Tropicália | Desenvolvido por Você</p>
     </footer>
 
-    <!-- Importando o JavaScript -->
-    <script defer src="script.js"></script>
+    <!-- Script -->
+    <script>
+        // Ajustar tamanho da fonte
+        function aumentarFonte() {
+            document.body.style.fontSize = "larger";
+        }
+
+        function diminuirFonte() {
+            document.body.style.fontSize = "smaller";
+        }
+
+        // Alternar modo de alto contraste
+        function alternarContraste() {
+            document.body.classList.toggle("alto-contraste");
+        }
+
+        // Criando um objeto para controlar a fala
+        let synth = window.speechSynthesis;
+        let vozAtual = null;
+
+        // Função para ler o texto
+        function lerTexto(id) {
+            // Parar qualquer fala em andamento antes de iniciar uma nova
+            if (synth.speaking) {
+                synth.cancel();
+            }
+
+            let elemento = document.getElementById(id);
+            
+            if (!elemento) {
+                console.error("Elemento não encontrado:", id);
+                return;
+            }
+
+            let texto = elemento.innerText || elemento.textContent;
+
+            if ('speechSynthesis' in window) {
+                vozAtual = new SpeechSynthesisUtterance(texto);
+                vozAtual.lang = "pt-BR"; // Definir idioma para português
+                vozAtual.rate = 1; // Velocidade normal
+                vozAtual.pitch = 1; // Tom da voz padrão
+                synth.speak(vozAtual);
+            } else {
+                alert("Seu navegador não suporta a leitura de texto.");
+            }
+        }
+
+        // Função para parar a leitura
+        function pararLeitura() {
+            if (synth.speaking) {
+                synth.cancel();
+            }
+        }
+    </script>
 
 </body>
 </html>
