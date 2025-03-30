@@ -1,0 +1,96 @@
+/* Configurações gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Barra de acessibilidade */
+.acessibilidade {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
+
+.acessibilidade button {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.acessibilidade button:hover {
+    background: #444;
+    color: white;
+}
+
+/* Cabeçalho */
+header {
+    background: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Seções */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Botão de fala */
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+}
+
+/* Alto contraste */
+.alto-contraste {
+    background: black !important;
+    color: yellow !important;
+}
+
+.alto-contraste a {
+    color: cyan !important;
+}
